@@ -6,6 +6,7 @@ interface VideoPreloaderProps {
   isMobile?: boolean;
 }
 
+//ok
 export default function VideoPreloader({ isExiting = false, onLogoTransition, isMobile = false }: VideoPreloaderProps) {
   const [progress, setProgress] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -107,8 +108,8 @@ export default function VideoPreloader({ isExiting = false, onLogoTransition, is
           >
             <source
               src={isMobile 
-                ? "https://vz-66b329af-17e.b-cdn.net/26fa5c82-af4f-4e96-a882-c965573b7342/play_480p.mp4"
-                : "https://vz-66b329af-17e.b-cdn.net/26fa5c82-af4f-4e96-a882-c965573b7342/play_480p.mp4"
+                ? "https://vz-f7850b5b-bc0.b-cdn.net/fc08bbc8-23c8-4074-ad1f-dedf7969fe67/play_480p.mp4"
+                : "https://vz-f7850b5b-bc0.b-cdn.net/fc08bbc8-23c8-4074-ad1f-dedf7969fe67/play_480p.mp4"
               }
               type="video/mp4"
             />
@@ -159,3 +160,4 @@ export default function VideoPreloader({ isExiting = false, onLogoTransition, is
     </>
   );
 }
+

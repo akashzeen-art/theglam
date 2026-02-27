@@ -37,8 +37,8 @@ export default function VideoBackground() {
     }
   }, []);
 
-  const desktopVideoUrl = "https://vz-66b329af-17e.b-cdn.net/26fa5c82-af4f-4e96-a882-c965573b7342/play_480p.mp4";
-  const mobileVideoUrl = "https://vz-66b329af-17e.b-cdn.net/26fa5c82-af4f-4e96-a882-c965573b7342/play_480p.mp4";
+  const desktopVideoUrl = "https://vz-f7850b5b-bc0.b-cdn.net/fc08bbc8-23c8-4074-ad1f-dedf7969fe67/play_480p.mp4";
+  const mobileVideoUrl = "https://vz-f7850b5b-bc0.b-cdn.net/fc08bbc8-23c8-4074-ad1f-dedf7969fe67/play_480p.mp4";
 
   return (
     <>
@@ -66,3 +66,4 @@ export default function VideoBackground() {
     </>
   );
 }
+
