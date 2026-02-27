@@ -126,11 +126,11 @@ export default function Index() {
         <Navbar />
 
         {/* Hero Section */}
-        <section className="relative pt-32 md:pt-40 pb-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="relative pt-32 md:pt-40 pb-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+          <div className="max-w-7xl mx-auto w-full">
             <div className="grid md:grid-cols-2 gap-12 items-center justify-items-center">
               {/* Content */}
-              <div className="animate-slide-up text-center mt-10 md:mt-0">
+              <div className="animate-slide-up text-center">
                 <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight max-w-2xl mx-auto">
                   Welcome to
                   <span className="text-purple-500"> TheGlam</span>
