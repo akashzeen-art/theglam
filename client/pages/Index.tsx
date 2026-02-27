@@ -130,7 +130,7 @@ export default function Index() {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center justify-items-center">
               {/* Content */}
-              <div className="animate-slide-up text-center md:text-left mt-10 md:mt-0">
+              <div className="animate-slide-up text-center mt-10 md:mt-0">
                 <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight">
                   Welcome to
                   <span className="text-purple-500"> TheGlam</span>
