@@ -131,10 +131,6 @@ export default function Index() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <div className="animate-slide-up">
-                <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-yoga-beige/50 border border-yoga-olive/20">
-                  <Leaf className="w-4 h-4 text-yoga-olive" />
-                  <span className="text-sm text-white font-medium">Premium Entertainment</span>
-                </div>
                 <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight">
                   Welcome to
                   <span className="text-purple-500"> TheGlam</span>
