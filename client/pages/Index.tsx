@@ -130,12 +130,12 @@ export default function Index() {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center justify-items-center">
               {/* Content */}
-              <div className="animate-slide-up text-center mt-10 md:mt-0 md:ml-10">
-                <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight">
+              <div className="animate-slide-up text-center mt-10 md:mt-0">
+                <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight max-w-2xl mx-auto">
                   Welcome to
                   <span className="text-purple-500"> TheGlam</span>
                 </h1>
-                <p className="text-lg text-white/90 mb-8 leading-relaxed">
+                <p className="text-lg text-white/90 mb-8 leading-relaxed max-w-2xl mx-auto">
                   Premium desi entertainment ka maza lijiye. Exclusive bold content dekho, mast kahaniyan explore karo, aur unlimited streaming enjoy karo.
                 </p>
               </div>
