@@ -126,11 +126,11 @@ export default function Index() {
         <Navbar />
 
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] py-24 md:py-32 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+        <section className="relative min-h-[80vh] py-24 md:py-32 px-4 sm:px-6 lg:px-8 flex items-end justify-center">
           <div className="max-w-7xl mx-auto w-full">
             <div className="grid gap-12 items-center justify-items-center">
               {/* Content */}
-              <div className="animate-slide-up text-center mt-28 md:mt-40">
+              <div className="animate-slide-up text-center">
                 <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight max-w-2xl mx-auto">
                   Welcome to
                   <span className="text-purple-500"> TheGlam</span>
