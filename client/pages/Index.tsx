@@ -126,7 +126,7 @@ export default function Index() {
         <Navbar />
 
         {/* Hero Section */}
-        <section className="relative min-h-[80vh] py-24 md:py-32 px-4 sm:px-6 lg:px-8 flex items-end justify-center">
+        <section className="relative min-h-[80vh] pt-[30rem] pb-24 px-4 sm:px-6 lg:px-8 flex items-end justify-center">
           <div className="max-w-7xl mx-auto w-full">
             <div className="grid gap-12 items-center justify-items-center">
               {/* Content */}
