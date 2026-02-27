@@ -145,15 +145,6 @@ export default function Index() {
               </div>
 
               {/* Hero Image */}
-              <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-yoga-beige to-yoga-olive/20 rounded-3xl blur-3xl opacity-40"></div>
-                  <div className="relative bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-xl text-center border border-white/20">
-                    <h3 className="text-2xl font-bold text-white mb-2">TheGlam Premium</h3>
-                    <p className="text-white/80">Exclusive entertainment collection</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
