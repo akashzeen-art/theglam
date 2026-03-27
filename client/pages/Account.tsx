@@ -3,14 +3,12 @@ import Navbar from "@/components/Navbar";
 import VideoBackground from "@/components/VideoBackground";
 import SubscriptionModal from "@/components/SubscriptionModal";
 import PlanModal from "@/components/PlanModal";
-import AgeVerificationModal from "@/components/AgeVerificationModal";
 import { User, LogIn } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Account() {
   const [subscriptionModal, setSubscriptionModal] = useState(false);
   const [planModal, setPlanModal] = useState({ isOpen: false, mobile: "" });
-  const [ageVerificationModal, setAgeVerificationModal] = useState({ isOpen: false, mobile: "" });
 
   const handleSignIn = () => {
     setSubscriptionModal(true);
@@ -18,12 +16,6 @@ export default function Account() {
 
   const handleSubscription = (mobile: string) => {
     setSubscriptionModal(false);
-    setAgeVerificationModal({ isOpen: true, mobile });
-  };
-
-  const handleAgeVerificationConfirm = () => {
-    const mobile = ageVerificationModal.mobile;
-    setAgeVerificationModal({ isOpen: false, mobile: "" });
     setPlanModal({ isOpen: true, mobile });
   };
 
@@ -39,11 +31,6 @@ export default function Account() {
         isOpen={subscriptionModal} 
         onClose={() => setSubscriptionModal(false)} 
         onSubmit={handleSubscription} 
-      />
-      <AgeVerificationModal
-        isOpen={ageVerificationModal.isOpen}
-        onClose={() => setAgeVerificationModal({ isOpen: false, mobile: "" })}
-        onConfirm={handleAgeVerificationConfirm}
       />
       <PlanModal
         isOpen={planModal.isOpen}
