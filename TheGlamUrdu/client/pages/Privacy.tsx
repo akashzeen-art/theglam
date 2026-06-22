@@ -1,8 +1,12 @@
 import Navbar from "@/components/Navbar";
 import VideoBackground from "@/components/VideoBackground";
+import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Privacy() {
+  const { t } = useLanguage();
+
   return (
     <div className="relative min-h-screen bg-yoga-cream">
       <VideoBackground />
@@ -12,8 +16,8 @@ export default function Privacy() {
         
         <div className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-md rounded-xl p-8 text-white">
-            <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
-            <p className="text-sm mb-8">Last Updated: 14-07-2025</p>
+            <h1 className="text-4xl font-bold mb-4">{t.legal.privacyTitle}</h1>
+            <p className="text-sm mb-8">{t.legal.privacyUpdated}</p>
             
             <div className="space-y-6 text-sm leading-relaxed">
               <p>This Privacy Policy describes how nServe Technology LLC ("we", "us", or "our") collects, uses, discloses, and protects your personal information when you visit or make a purchase from https://theglam.world/ (the "Site") or use any of our services (collectively, the "Services").</p>
@@ -82,18 +86,7 @@ export default function Privacy() {
           </div>
         </div>
         
-        <footer className="border-t border-white/20 bg-white/10 backdrop-blur-md py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto text-center text-white text-sm">
-            <p className="mb-2">&copy; 2025, nServe Technology LLC All Rights Reserved</p>
-            <div className="flex gap-2 justify-center">
-              <Link to="/terms" className="hover:text-white/80">Terms of Services</Link>
-              <span>|</span>
-              <Link to="/refund" className="hover:text-white/80">Refund Policy</Link>
-              <span>|</span>
-              <Link to="/privacy" className="hover:text-white/80">Privacy Policy</Link>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );

@@ -1,9 +1,12 @@
 import Navbar from "@/components/Navbar";
 import VideoBackground from "@/components/VideoBackground";
+import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Contact() {
+  const { t } = useLanguage();
+
   return (
     <div className="relative min-h-screen bg-yoga-cream">
       <VideoBackground />
@@ -15,21 +18,19 @@ export default function Contact() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12 animate-slide-up">
               <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
-                ہم سے <span className="text-purple-500">رابطہ کریں</span>
+                {t.contact.title} <span className="text-purple-500">{t.contact.titleHighlight}</span>
               </h1>
-              <p className="text-xl text-white/90">
-                ہمیں آپ کی بات سن کر خوشی ہوگی۔ بے جھجھک ہم سے رابطہ کیجیے!
-              </p>
+              <p className="text-xl text-white/90">{t.contact.subtitle}</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 sm:p-12 animate-fade-in">
-              <h2 className="text-3xl font-bold text-white mb-8">nServe Technology LLC پرائیویٹ لمیٹڈ</h2>
+              <h2 className="text-3xl font-bold text-white mb-8">{t.contact.companyName}</h2>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">پتہ</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">{t.contact.addressLabel}</h3>
                     <p className="text-white/80 text-lg">
                       FDRK 0460, Compass Building, Al Sohada Road, Al Hamara Industrial Zone FZ, Ras Al Khaimah, UAE
                     </p>
@@ -39,7 +40,7 @@ export default function Contact() {
                 <div className="flex items-start gap-4">
                   <Phone className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">فون</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">{t.contact.phoneLabel}</h3>
                     <a href="tel:+919667687077" className="text-white/80 text-lg hover:text-purple-400 transition-colors">
                       +91 9667687077
                     </a>
@@ -49,7 +50,7 @@ export default function Contact() {
                 <div className="flex items-start gap-4">
                   <Mail className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">ای میل</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">{t.contact.emailLabel}</h3>
                     <a href="mailto:info@nservetechnology.com" className="text-white/80 text-lg hover:text-purple-400 transition-colors">
                       info@nservetechnology.com
                     </a>
@@ -60,18 +61,7 @@ export default function Contact() {
           </div>
         </section>
 
-        <footer className="border-t border-white/20 bg-white/10 backdrop-blur-md py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto text-center text-white text-sm">
-            <p className="mb-2">&copy; 2025، nServe Technology LLC جملہ حقوق محفوظ ہیں</p>
-            <div className="flex gap-2 justify-center">
-              <Link to="/terms" className="hover:text-white/80">سروس کی شرائط</Link>
-              <span>|</span>
-              <Link to="/refund" className="hover:text-white/80">ریفنڈ پالیسی</Link>
-              <span>|</span>
-              <Link to="/privacy" className="hover:text-white/80">پرائیویسی پالیسی</Link>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );

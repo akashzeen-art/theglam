@@ -12,7 +12,6 @@ interface PlanModalProps {
 
 export default function PlanModal({ isOpen, onClose, onSubmit, mobile, email, name, txnid }: PlanModalProps) {
   const { t } = useLanguage();
-  const { symbol } = t.currency;
   const { monthly, monthlyOriginal, yearly, yearlyOriginal } = t.prices;
 
   if (!isOpen) return null;
@@ -25,7 +24,7 @@ export default function PlanModal({ isOpen, onClose, onSubmit, mobile, email, na
     }
   };
 
-  const formatPrice = (amount: number) => `${symbol}${amount}`;
+  const formatPrice = (amount: number) => String(amount);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
