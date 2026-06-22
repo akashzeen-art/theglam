@@ -1,4 +1,5 @@
 import { X } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface SubscriptionModalProps {
   isOpen: boolean;
@@ -7,6 +8,8 @@ interface SubscriptionModalProps {
 }
 
 export default function SubscriptionModal({ isOpen, onClose, onSubmit }: SubscriptionModalProps) {
+  const { t } = useLanguage();
+
   if (!isOpen) return null;
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -26,16 +29,16 @@ export default function SubscriptionModal({ isOpen, onClose, onSubmit }: Subscri
         </button>
 
         <form onSubmit={handleSubmit}>
-          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">ابھی سبسکرائب کریں</h3>
+          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">{t.subscription.title}</h3>
           
           <div className="mb-6">
             <label htmlFor="mobileInput" className="block text-gray-700 font-semibold mb-2">
-              موبائل نمبر درج کریں
+              {t.subscription.label}
             </label>
             <input
               type="tel"
               id="mobileInput"
-              placeholder="xxxxxxxxxx"
+              placeholder={t.subscription.placeholder}
               maxLength={10}
               pattern="[0-9]{10}"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
@@ -54,7 +57,7 @@ export default function SubscriptionModal({ isOpen, onClose, onSubmit }: Subscri
             type="submit"
             className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95"
           >
-            ابھی سبسکرائب کریں
+            {t.subscription.submit}
           </button>
         </form>
       </div>

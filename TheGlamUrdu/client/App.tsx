@@ -12,12 +12,14 @@ import Privacy from "./pages/Privacy";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Account from "./pages/Account";
+import { LanguageProvider } from "./context/LanguageContext";
 
 const queryClient = new QueryClient();
 
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <LanguageProvider>
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -34,6 +36,7 @@ export default function App() {
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }
